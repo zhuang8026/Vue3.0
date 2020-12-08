@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-1 章导学-为什么要使用Composition API</title>
+</head>
+<body>
+    20200918發布 Vue3.0 -> V3.0.0
+    vue3.0 -> 90% === vue2.0
+
+    1. 為什麼會產生 composition API ===>  setup (新方法)
+        -> vue2邏輯問題
+            -> Mixin （明明空間衝突 邏輯不清晰 不易復用）
+            -> slot 作用域插槽（配置多 代碼分裂 性能差）
+            -> vue2 對 TS 不支援
+    2. Vue3 中已經沒有 “this”
+        -> 以前的寫法：
+            data() {
+                return {
+                    ...
+                }
+            },
+            methods: {
+                ...
+            }
+        -> 現在Vue3 寫法：
+            setup {
+                .... 全部邏輯和state 都寫在 setup 中
+            }
+        -> 
+        -> 
+    3. composition API 優點
+        -> 邏輯代碼更少 更集中 更容易擴張
+        -> 更加豐盛的API集成
+        -> 對TS非常友好
+        -> 
+    4. 
+    5. 
+    6. 
+    7. 
+
+
+</body>
+</html>

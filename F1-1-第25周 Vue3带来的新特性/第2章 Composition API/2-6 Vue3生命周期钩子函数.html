@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-6 Vue3生命周期钩子函数</title>
+</head>
+<body>
+    20200918發布 Vue3.0 -> V3.0.0
+    vue3.0 -> 90% === vue2.0
+
+    1. 生命周期钩子函数
+        -> https://v3.cn.vuejs.org/api/options-lifecycle-hooks.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90
+    2.  生命週期變化：
+            destory => unmounted
+            beforeDestory => beforeUnmount
+    3.  Option API 選項API 
+            -> 
+            -> 
+        composition API
+            1.  seup() vue組建渲染的最上層 
+
+            2.  beforeCreate -> use setup() -> beforeCreate
+                created -> use setup() -> created
+
+            3.  beforeMount -> onBeforeMount
+                mounted -> onMounted
+
+            4.  beforeUpdate -> onBeforeUpdate
+                updated -> onUpdated
+
+            5.  * beforeDestory -> beforeUnmount -> onBeforeUnmount / 銷毀前
+                * destory -> unmounted -> onUnmounted / 銷毀
+                errorCaptured -> onErrorCaptured
+
+            6.  ***** 只要頁面上的 響應式資料有改動，都會觸法以下生命週期
+                ***** 頁面render 會先執行 onRenderTracked
+            renderTracked -> onRenderTracked （跟蹤渲染，但響應式的元素被渲染 or 響應式內容修改 的時候觸法）
+                ***** 頁面修改 onRenderTriggered ，因為頁面修改會重新render，所以 onRenderTracked 會再被觸法一次
+            renderTriggered -> onRenderTriggered (觸法渲染，才會進行回調)
+
+    5. vue3 hook 中的 destroy 已改成 onUnmounted 
+    5. vue3 hook 中的 beforeDestory 已改成 onBeforeUnmount 
+    5. vue3 hook 中的 Setup() 方法優先與 beforeCreate 執行
+    6. 
+    7. 
+
+
+</body>
+</html>

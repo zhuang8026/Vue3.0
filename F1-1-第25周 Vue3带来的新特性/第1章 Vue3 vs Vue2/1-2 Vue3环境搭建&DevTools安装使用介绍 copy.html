@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  20200918發布 Vue3.0 
+  -> V3.0.0 vue3.0 
+  -> 90% === vue2.0 
+  1. vue 3.0 安裝有2種
+    -> CLI: vue create project-name (Vue3 preset) 
+    -> Vite: npm init vite-app project-name 
+
+  2. *** 首選要先安裝大於 4.5 以上版本 *** 
+  // --------- 第一種 --------- 
+  -> npm install -g @vue/cli 
+  -> 檢查 vue --version 
+    -> 建立項目 vue create vue3-demo 
+      
+      -> Manually select features ( 選擇手動設置 )
+          -> choose vue version 
+          -> babel
+          -> TypeScript 
+          -> Router 
+          -> Vuex 
+          -> Css Pre-processors 
+          -> Linter / Formatter
+      -> 3.x (preview) (使用3.0)
+      -> use class-style componet syntax ? NO （是否使用class function ？）
+      -> use Babel alongside TypeScript (....) ? Yes （是否使用typeScript ？）
+      -> use history mode for router ? NO (是否使用history的模式)
+      -> Pick a css pre-processor (....) : => Sass/SCSS (with dart-sass) (選擇css模式)
+      -> pick a linter / formatter config: => ESLint + Standard config 
+      -> pick additional lint features: => Lint on save 
+      -> Where do you prefer placing for Babel, ESLint, etc. ? => In dedicated config files 
+      -> Save this as a preset for future project ? 是否要將上面的配置項目保存？ 看自己選擇 
+      => 如果選 yes 會出現 Save as .... : => 寫入這個模板的名字
+      -> 
+
+  // --------- 第二種 --------- 
+  -> npm init vite-app vue3-vite-demo （安裝）
+    -> cd vue3-vite-demo
+      -> npm install （安裝package中的依賴）
+  -> code . (vscode 開啟)
+
+  Vue3開發工具介紹
+  -> 通過chrome商店進行安裝（beta-channel）
+  -> 本地化安裝
+    -> https://github.com/vuejs/vue-devtools (下載)
+      -> (版本轉換) 從dev 轉到 next
+        -> code 中選擇 HTTPS
+          -> 複製 "https://github.com/vuejs/vue-devtools.git"
+            -> cmd -> git clone https://github.com/vuejs/vue-devtools.git
+            -> 安裝完畢之後
+              -> cd vue-devtools
+              -> yarn install   (安裝依賴)
+              -> yarn run build (構建依賴)
+              -> 打開 chrome 瀏覽器
+                -> 更多工具 
+                  -> 擴展程序
+                  -> 打開 “開發者模式”
+                    -> 加載已解壓的擴展程序
+                      -> 找到剛剛的 vue-devtools
+                        -> packages
+                          -> shell-chrome
+                            -> ok ! 直接按選擇
+                              -> 安裝完成！
+      -> 怎麼使用？
+        -> 打開 chrome
+          -> F12
+            -> network 旁邊... 有一個 Vue 選項
+
+</body>
+</html>

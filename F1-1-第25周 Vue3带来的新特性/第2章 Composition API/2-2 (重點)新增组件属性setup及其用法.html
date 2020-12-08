@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-2 新增组件属性setup及其用法</title>
+</head>
+<body>
+    20200918發布 Vue3.0 -> V3.0.0
+    vue3.0 -> 90% === vue2.0
+
+    1. Setup 介紹
+        -> https://v3.cn.vuejs.org/guide/composition-api-setup.html
+        -> 1. 由于在执行 setup 时尚未创建组件实例，因此在 setup 选项中没有 this。
+        -> 2. 将无法访问组件中声明的任何属性——本地状态、计算属性或方法
+        -> setup (props, ctx) { }
+            -> ctx ===> 全名: context
+                -> context 中有 {attrs, slots, emit}
+            -> props 不能使用 ES6 解構 {...}
+                -> 如何非用不可？
+                    -> toRefs 是解決辦法
+                        -> const { ... } = toRefs(props)
+    2. 
+    3. 
+    4. 
+    5. 
+    6. 
+    7. 
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-8 teleport（傳送） 组件介绍</title>
+</head>
+<body>
+    20200918發布 Vue3.0 -> V3.0.0
+    vue3.0 -> 90% === vue2.0
+    code 重新整理: npm run lint -- --fix
+
+    teleport (传送)
+
+    1. 場景: 有時候我們需要放置元素到 根節點 以外的位置
+    2. Teleport 用於控制在 DOM 中任一指定父節點下呈現HTML, 而不必求助全局狀態或將其拆封為兩個組件。
+        -> 控制部分 DOM 脫離根節點
+        -> 可以使用本地化邏輯控制組件
+        -> 適用與 fixed 或者 絕對定位 的組件
+    3. <teleport to="#end-of-body"> ... </teleport> 組件是將 "..." 指定渲染到 id 為 end-of-body 中。
+        -> 重點：此節點只css 不吃 掛載dom節點的css, css 要寫在 #end-of-body 組件中
+    4. Teleport 的 to 屬性 可以指定的對象各式：
+        -> id    -> <teleport to="#id"></teleport>
+        -> class -> <teleport to=".className"></teleport>
+        -> data  -> <teleport to="[data-meta]"></teleport>
+        -> 動態   -> <teleport :to="props"></teleport>
+    5. teleport 传送多组 DOM
+        -> 如果同时对 一个 #id || .classname 进行 teleport（传送），他会将资料都送到  #id || .classname 中
+        -> <teleport to="#end-of-body" :disabled="!toggle" v-if="toggle">{...A}</teleport>
+        -> <teleport to="#end-of-body" :disabled="!toggle" v-if="toggle">{...B}</teleport>
+    6. teleport 是保持状态的，使用disabled属性关闭传送
+        -> 但资料依然会留在页面上，如果资料也想关闭
+            -> 请加入 v-if="参数"
+            -> <teleport to="#end-of-body" :disabled="!toggle" v-if="toggle">{...A}</teleport>
+    7. 
+
+
+</body>
+</html>

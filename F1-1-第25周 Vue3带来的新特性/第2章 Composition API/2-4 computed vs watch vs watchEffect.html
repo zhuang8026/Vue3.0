@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-4 computed vs watch vs watchEffect</title>
+</head>
+<body>
+    20200918發布 Vue3.0 -> V3.0.0
+    vue3.0 -> 90% === vue2.0
+
+    1. watch 監聽事件 vue2.0 === vue3.0 （用法）
+        -> home.vue 中可以寫 
+        -> home.ts 中也可以寫 vue3.0
+        ->  watch: {
+                counter1 (newVal: number, oldVal: number) {
+                console.log('newVal-js:', newVal)
+                console.log('oldVal-js:', oldVal)
+                }
+            },
+        ->  watch(counter, (newVal, oldVal) => {
+                console.log('newVal-ts:', newVal)
+                console.log('oldVal-ts:', oldVal)
+            })
+    2. watchEffect 也是 監聽事件 vue3.0 
+        ->  watchEffect(() => {
+                // 'pre' | 'post' | 'sync'
+                // 'pre'  組建更新前執行
+                // 'post' 組建更新之後執行
+                // 'sync' 同步執行
+                const total = counter.value * 3
+                console.log('total-ts:', total)
+            },{
+                flush: 'pre',
+                onTrack: (e) => {
+                console.log('onTrack:', e)
+                },
+                onTrigger: (e) => {
+                console.log('onTrigger:', e)
+                }
+            })
+        -> 
+        -> 
+        -> 
+    3. watch vs watchEffect 
+        -> 都可以監聽響應式對象的變化，從而執行回調
+        -> watchEffect 會默認執行一次，但 watch 不會，必須由事件觸法
+        * -> watchEffect 只接收 函數 作為 回調參數
+            * -> 但 watch 可以監聽多個參數
+    4. 
+    5. 
+    6. 
+    7. 
+
+
+</body>
+</html>

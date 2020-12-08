@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1-7 Vue3集成TypeScript及TS配置指南</title>
+</head>
+<body>
+    20200918發布 Vue3.0 -> V3.0.0
+    vue3.0 -> 90% === vue2.0
+
+    1. https://cli.vuejs.org/zh/guide/installation.html
+        -> 设置默认包管理工具
+        -> 如果喜歡 npm 
+            -> vue config --set packageManager npm 
+            -> muke demo 如果想新增其他依賴，但剛開始安裝的時候 並 沒有選擇，該怎麼辦？
+                -> 方法一：
+                    -> vue ui (vue 項目工具)
+                        -> 導入
+                            -> 選擇項目 
+                                ->  確定 
+                        -> 選擇 依賴
+                            -> 點選 “安裝依賴”
+                                -> EX： Router 
+                                    -> 安裝 
+                            
+                -> 方法二：
+                    -> 使用cmd 安裝
+                        -> cd xxx-items （指向自己的項目）
+                            -> vue add typescript (EX: 添加 typescript )
+                                -> Use class-style component syntax? yes
+                                -> Use Babel alongside TypeScript (required for modern mode, aut
+                                o-detected polyfills, transpiling JSX)? yes
+                                -> Convert all .js files to .ts? yes
+                                -> Allow .js files to be compiled? NO
+                                -> Skip type checking of all declaration files (recommended for 
+                                apps)? YES 
+                                -> ok !
+                    -> 安裝完成之後，會有一個抱錯：
+                        -> extends: [
+                                |   ^
+                            23 |     'plugin:vue/vue3-essential',
+                            24 |     '@vue/standard',
+                            25 |     '@vue/typescript'
+                    -> 在.eslintrc.js
+                        -> 這是說 extends 有重複，將舊的 刪掉 就可以了
+    2. 
+    3. 
+    4. 
+    5. 
+    6. 
+    7. 
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-3 Vue3中如何进行逻辑复用？</title>
+</head>
+<body>
+    20200918發布 Vue3.0 -> V3.0.0
+    vue3.0 -> 90% === vue2.0
+
+    1. Vue3 如何添加methods ????
+        -> 第一： vue3 沒有 this，所以 在vue3 中，console.log(this) // undefined
+            -> 為什麼呢？
+                -> 因為 setup 渲染是在 生命週期(moment) 掛載 之前
+                -> this 必須是在 moment 掛載完畢之後，才會出現
+    2. 在 setup 中寫的所有方法，可以脫離
+        -> 全部轉移到  home.ts 中，並 export 出來 （和react 很像）
+        -> 然後在丟回需要的頁面 “ import { until } from './Home' ”
+        -> 最後在 擴展運算 回到頁面上 
+            ->  setup () {
+                    return {
+                    ...until()
+                    }
+                }
+    3. 
+    4. 
+    5. 
+    6. 
+    7. 
+
+
+</body>
+</html>

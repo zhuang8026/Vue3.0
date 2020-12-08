@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2-5 深入学习常见响应式API0-0</title>
+</head>
+<body>
+    20200918發布 Vue3.0 -> V3.0.0
+    vue3.0 -> 90% === vue2.0
+
+    1. optionAPI / Vue2.0
+        -> 是在組建中直接傳遞的屬性，並非是 setup(){...}
+            -> 例如：
+                -> watch() {...}
+                -> computed() {...}
+    2. compositionAPI
+        -> reactive 
+            -> 響應式 API, 將object or array 變成 立即響應
+            -> *** 資料必須套在 object 中，才能使用 *** 
+            -> 
+            -> 
+        -> readonly
+            -> 將 reactive 複製一份，並且 只讀
+            -> 只讀 === 不能修改 
+            -> 只要有修改的行為，就會出現 error
+        ->ref 
+            -> 響應式 API, 將string number boolen 變成 立即響應
+            -> 在ref中的value，本身就有 get 和 set 方法
+                -> 所以資料才能立即響應 
+                -> 
+                -> 
+        -> isProxy/isReactive/isReadonly 判断专用
+        -> toRaw/toRef/toRefs 转行专用
+        -> 
+    3. 如何快速引入 react API ？
+        -> 鼠標選擇react API
+            -> ios 
+                -> command + .(右下角按鍵)
+    4. 
+    5. 
+    6. ref() toRef() toRefs() -> vue3.0
+        ->  ref    本质是拷贝, 不会影响原始数据
+        ->  toRef  本质是引用关系, 会影响原始数据 (toRef一次仅能设置一个数据)
+        ->  toRefs 本质是引用关系, 会影响原始数据 (批量设置多个数据为响应式数据)
+        ->  ref 和 reactive 的区别
+            -> ref 是把值类型添加一层包装，使其变成响应式的引用类型的值。
+            -> reactive 则是引用类型的值变成响应式的值。
+            -> 所以两者的区别只是在于是否需要添加一层引用包装
+            -> ref(0)  -->  reactive( { value:0 })
+
+    7. uesRef() -> react
+</body>
+</html>
