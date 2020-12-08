@@ -1,9 +1,14 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <div id="nav">
+      <router-link to="/path" custom v-slot="{ navigite }">
+        <span v-on:click="navigite">Home</span>
+      </router-link>
+      |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view></router-view>
   </div>
-  <router-view/>
 </template>
 
 <style>
